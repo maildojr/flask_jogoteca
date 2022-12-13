@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "template.html "%}
 {% block conteudo %}
         <table class="table table-striped table-responsive table-bordered">
@@ -26,4 +27,28 @@
             </tbody>
         </table>
         <a class="btn btn-primary" href="{{ url_for('novo') }}">Novo Jogo</a>
+=======
+{% extends "template.html "%}
+{% block conteudo %}
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Console</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for jogo in jogos %}
+                <tr>
+                    <td>{{ jogo.nome }}</td>
+                    <td>{{ jogo.categoria }}</td>
+                    <td>{{ jogo.console }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+>>>>>>> 1f3651e85defd807cd6a0a6ef525f64dab7c8007
 {% endblock %}
